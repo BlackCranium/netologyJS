@@ -9,7 +9,9 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">{{character.name}}</h5>
+          <h5 class="modal-title" id="exampleModalLabel">
+            {{ character.name }}
+          </h5>
           <button
             type="button"
             class="btn-close"
@@ -28,13 +30,11 @@
 
           <div>
             <h5>Описание:</h5>
-            <p>{{character.description}}</p>
+            <p>{{ character.description }}</p>
             <h5>Комиксы:</h5>
             <ul>
-              <li v-for="(com, idx) in character.comics"
-                :key="idx"
-              >
-                <a :href="com.resourceURI">{{com.name}}</a>
+              <li v-for="(com, idx) in character.comics" :key="idx">
+                <a :href="com.resourceURI">{{ com.name }}</a>
               </li>
             </ul>
           </div>
@@ -56,9 +56,8 @@
 <script>
 export default {
   name: "AppModal",
-  props: ['character'],
+  props: ["character"],
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
